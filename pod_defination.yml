@@ -1,0 +1,12 @@
+#YAML file to create pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:                                            #can create custom key-value pairs
+    app: myapp
+    type: front-end
+spec:
+  containers:
+  - name: ng
+    image: nginx
