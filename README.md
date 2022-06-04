@@ -12,3 +12,7 @@ $ kubectl delete pod ng
 
 ### to create pod 
 $ kubectl create -f pod_defination.yml
+
+### create ReplicationController and ReplicaSet
+$ kubectl create -f rc_defination.yml
+$ kubectl create -f replicationset_defination.yml
