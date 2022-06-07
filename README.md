@@ -26,8 +26,25 @@ $ kubectl create -f rc_defination.yml </br>
 $ kubectl create -f replicationset_defination.yml
 </br>
 </br>
-<i> View RS, Rc , pods</i>
+<i> View RS, Rc , pods</i></br>
 $ kubectl get replicationcontroller </br>
 $ kubectl get replicaset</br>
 $ kubectl get pods</br>
 </br>
+
+#### create deployments- update and rollback
+$ kubectl create -f deployment-defination.yml </br>
+$ kubectl get deployments </br>
+$ kubectl describe deployment deployment-name </br>
+
+#### update
+$ kubectl apply -f deployment-defination.yaml</br>
+$ kubectl set image deployment/DEPLOYMENT-name nginx=nginx:1.9.1 </br>
+<i> does not update config file </i>
+</br>
+#### rollback
+$ kubectl rollout status deployment/DNAME </br>
+$ kubectl rollout history deployment/DNAME </br>
+$ kubectl rollout undo deplloyment/DNAME </br>
+  
+
