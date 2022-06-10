@@ -2,6 +2,9 @@
 Learn Kubernetes using MiniKube , Single Node Cluster
 </br>
 
+# Deployment creates Replicaset which in turn creates Pod.</br>
+# Services creates communication between end users and application(Pod) using NodePort . Also , acts as a LoadBalancer.</br>
+
 ### Run cluster on minikube using docker
 $ minikube start --driver=docker </br>
 $ minikube start|status|pause|stop
@@ -47,4 +50,6 @@ $ kubectl rollout status deployment/DNAME </br>
 $ kubectl rollout history deployment/DNAME </br>
 $ kubectl rollout undo deplloyment/DNAME </br>
   
-
+### Service
+$ kubectl create -f service-def.yml </br>
+$ kubectl get services </br>
